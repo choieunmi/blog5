@@ -1,14 +1,4 @@
-@media (min-width: 1920px) {
-  body {
-    overflow-x: hidden;
-  }
-}
-
 /* 커스텀 */
-
-:root {
-  --con-width: 1340px;
-}
 
 /* main  */
 .section {
@@ -43,10 +33,6 @@
   transform: translatey(-50%);
   position: absolute;
   z-index: 200;
-}
-
-.nanda-pf {
-  background-color: Red;
 }
 
 .nanda-pf .cir {

@@ -21,6 +21,26 @@ html > body {
   margin: 0 auto;
 }
 
+/* 스크롤 */
+.scroll {
+  border: 1px solid black;
+}
+
+.scroll h1 {
+  color: black;
+}
+
+.demo a {
+  color: black;
+}
+
+#scroll a span {
+  border: 2px solid black;
+}
+#scroll a span::before {
+  background-color: black;
+}
+
 /* header */
 
 .top-bar .top-bar__ham-menu {
@@ -31,6 +51,7 @@ html > body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .top-bar.active .top-bar__ham-menu {
   background-image: url(https://cdn.jsdelivr.net/gh//choieunmi/brand_site/top-bar/top-bar__ham40-white.png);
 }
@@ -46,7 +67,14 @@ html > body {
 /* main */
 .main {
   position: relative;
+  pointer-events: none;
+  /* 스크롤버튼 먹게하기 위해서 pointer none */
 }
+
+.main-btn {
+  pointer-events: all;
+}
+
 .frame {
   position: absolute;
   display: flex;
@@ -81,6 +109,7 @@ html > body {
   animation: drift 8s infinite linear;
   background: rgba(255, 255, 255, 0.2);
 }
+
 @keyframes drift {
   100% {
     transform: rotate(-360deg);

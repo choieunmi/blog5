@@ -1,8 +1,4 @@
 /* 라이브러리 */
-.con {
-  width: var(--con-width);
-  margin: 0 auto;
-}
 
 body {
   position: relative;
