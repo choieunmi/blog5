@@ -1,0 +1,445 @@
+/*커스텀 라이브러리*/
+.con {
+  width: 1920px;
+  margin: 0 auto;
+}
+
+@media (min-width: 1920px) {
+  body {
+    overflow-x: hidden;
+  }
+}
+
+.loading {
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-color:#fbf4e0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:1000;
+}
+
+::-webkit-scrollbar-track
+{
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 5px;
+	background-color: #FFC501;
+}
+
+/* main */
+.main > .iphone_Mockup {
+  position: absolute;
+  top: 100px;
+  left: 1064px;
+}
+
+.main > .egg {
+  position: absolute;
+  top: 907px;
+  left: 52px;
+}
+
+.main > .iphone_Mockup.infinite_animation {
+  animation-name: infinite;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes infinite {
+  0% {
+    transform: translatey(0);
+  }
+
+  50% {
+    transform: translatey(-3%);
+  }
+
+  100% {
+    transform: translatey(0);
+  }
+}
+
+/* persona */
+.persona {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.persona > .persona_img {
+  position: absolute;
+  top: 166px;
+}
+
+/* Design_assest */
+
+.Design_assest {
+  margin-top: 70px;
+  position: relative;
+}
+
+.Design_assest::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 180px;
+  background-color: #fbf4e0;
+  z-index: -100;
+  top: -20px;
+}
+
+.bg-img {
+  position: relative;
+}
+
+.content-img > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.content-img > img:first-child {
+  left: 269px;
+  top: 333px;
+}
+
+.content-img > img:nth-child(2) {
+  left: 268px;
+  top: 769px;
+}
+
+.content-img > img:nth-child(3) {
+  left: 964px;
+  top: 769px;
+}
+
+.content-img > img:last-child {
+  left: 267px;
+  top: 1470px;
+}
+
+/* flow_chart */
+
+.flow_chart {
+  margin-top: 200px;
+}
+
+/* .wire-frame-menu*/
+.wire-frame-menu {
+  top: -300px;
+  z-index: 100;
+  width: 1920px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.wire-frame-menu::after {
+  position: absolute;
+  content: "";
+  background-color: #fbf4e0;
+  height: 912px;
+  width: 100%;
+  top: 110px;
+  z-index: -200;
+}
+
+.wire-frame-menu::before {
+  position: absolute;
+  content: "";
+  background-color: #ffd355;
+  height: 300px;
+  width: 100%;
+  position: absolute;
+  top: 300px;
+  z-index: -100;
+  overflow: hidden;
+}
+
+.wire-frame-menu > .title {
+  margin-left: 200px;
+  padding-bottom: 83px;
+}
+
+.wire-frame-menu > .img-list.infinite_animation02 {
+  animation-name: infinite02;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes infinite02 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Enter_info */
+
+.Enter_info {
+  position: relative;
+}
+
+.Enter_info__phone > img {
+  position: absolute;
+  top: 341px;
+}
+
+.Enter_info__phone > img:first-child {
+  left: 637px;
+  z-index: -100;
+}
+
+.Enter_info__phone > img:nth-child(2) {
+  left: 1039px;
+  z-index: -200;
+}
+
+.Enter_info__phone > img:nth-child(3) {
+  left: 1441px;
+  z-index: -300;
+}
+
+/* home_menu */
+.home_menu {
+  position: relative;
+}
+.home_menu > .bg {
+  position: relative;
+  z-index: -200;
+}
+
+.home_menu > .frame {
+  position: absolute;
+  top: 510px;
+  left: 1005px;
+}
+
+.home_menu > video {
+  position: absolute;
+  top: 525px;
+  left: 1040px;
+  z-index: -100;
+  height: 930px;
+}
+
+/* menu_sug */
+.menu_sug {
+  position: relative;
+}
+
+.menu_sug > .bg {
+  position: relative;
+  z-index: -200;
+}
+
+.menu_sug > .phone {
+  position: absolute;
+  top: 231px;
+  right: 0;
+  left: auto;
+}
+
+.menu_sug > .avocado {
+  width: 175px;
+  height: 227px;
+  position: absolute;
+  top: 1000px;
+  left: 610px;
+  z-index: -100;
+
+  transform: rotate(-5deg);
+}
+
+.menu_sug > .avocado.infinite_animation03 {
+  animation-name: infinite03;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes infinite03 {
+  50% {
+    left: 575px;
+    transform: rotate(-16deg);
+  }
+}
+
+/* my-menu */
+.my-menu {
+  position: relative;
+  margin-top: 200px;
+}
+
+.my_menu_box {
+  position: absolute;
+  top: 0px;
+  margin-left: 1138px;
+}
+
+.setting_box {
+  position: absolute;
+  top: 687px;
+  margin-left: 344px;
+}
+
+.frame {
+  position: relative;
+}
+
+.my-menu-video {
+  position: absolute;
+  top: 28px;
+  left: 38px;
+  height: 932px;
+}
+
+.home-menu__weight_record {
+  position: absolute;
+  top: 1812px;
+  margin-left: 1202px;
+}
+
+.home-menu__month_all {
+  margin-left: 238px;
+  top: 2124px;
+  position: absolute;
+}
+
+/* diary */
+.diary{
+  margin-top:250px;
+}
+.diary > .bg-img{
+  position:relative;
+  z-index:-200;
+} 
+
+.diary > .mokup > .mokup-2 {
+  margin-top: 20rem;
+  position: absolute;
+  width: 960px;
+}
+
+.diary > .mokup > .mokup-r {
+  margin-left: 960px;
+}
+
+.diary > .mokup > .mokup-2 > img {
+  margin: 0 auto;
+  position: relative;
+}
+
+.diary > .mokup > .mokup-2 > video {
+  position: absolute;
+  top: 27px;
+  left: 267px;
+  height: 934px;
+  z-index:-100;
+}
+
+/* notice */
+.notice{
+  position:relative;
+  margin-top:200px;
+}
+
+.notice > .bg{
+  position:relative;
+  z-index:-200;
+}
+
+.notice__phone{
+  position:absolute;
+  left:421px;
+  bottom:128px;
+}
+
+.notice__phone > .frame{
+  position:relative;
+  
+}
+
+.notice__phone > .video {
+  position: absolute;
+  left:40px;
+  top:30px;
+  z-index:-100;
+  height:930px;
+}
+
+.notice > .alarm_icon{
+  position:absolute;
+  top:154px;
+  left:1180px;
+  width:78px;
+  height:78px;
+}
+
+.notice > .alarm_icon.infinite_animation{
+  animation-name: infinite-04;
+  animation-duration: 1.3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes infinite-04 {
+  0% {
+    transform: rotate(-15deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+  100% {
+   transform: rotate(-15deg);
+  }
+}
+
+/* finally_page */
+.finally_page {
+  background-color: #fbf4e0;
+  padding-top:100px;
+  margin-top:100px;
+}
+
+.finally_page > .icon_img .infinite_animation{
+  animation-name: infinite05 ;
+  animation-duration: 1s;
+  animation-iteration-count: infinite ;
+  animation-timing-function: linear ; 
+}
+
+
+@keyframes infinite05{
+  0%{
+    transform: translatey(0) ;
+  }
+  
+  50%{
+    transform: translatey(-8%);    
+  }
+  
+  100%{
+    transform: translatey(0);    
+  }
+  
+}

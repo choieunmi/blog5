@@ -1,0 +1,146 @@
+/* 라이브러리 */
+.con {
+  width: var(--con-width);
+  margin: 0 auto;
+}
+
+body {
+  position: relative;
+  width: 1920px;
+  /*   min-width:1920px; */
+}
+
+/* 커스텀 */
+
+:root {
+  --con-width: 1340px;
+}
+
+.con {
+  width: var(--con-width);
+  margin: 0 auto;
+}
+
+/* main */
+.main {
+  position: relative;
+}
+
+.main__img {
+  position: absolute;
+  top: 0;
+  left: 1049px;
+}
+
+.main__txt > .txt-1 {
+  position: absolute;
+  top: 464px;
+}
+
+.main__txt > .txt-2 {
+  position: absolute;
+  top: 690px;
+}
+
+/* about-me */
+.about-me {
+  padding-top: 200px;
+}
+
+.about-me .con {
+  position: relative;
+}
+
+.about-me .btn {
+  position: absolute;
+  top: 423px;
+  left: 700px;
+}
+
+.about-me .btn a img {
+  margin-right: 20px;
+}
+
+/* design-skill */
+
+.design-skill > .txt {
+  margin-bottom: 150px;
+}
+
+/* possib */
+
+.possib__box > img {
+  padding-bottom: 70px;
+}
+
+.possib__box > img:last-child {
+  padding-bottom: 0px;
+}
+
+.possib__txt {
+  padding-bottom: 90px;
+}
+
+/* aspiration */
+.aspiration > .txt {
+  font-size: 32px;
+  text-align: center;
+  padding-bottom: 90px;
+}
+
+.aspiration__box {
+  position: relative;
+}
+
+.aspiration__box .bg {
+  left: 0;
+  z-index: -100;
+  position: relative;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.aspiration__box > .aspiration__txt {
+  position: absolute;
+  top: 131px;
+  left: 290px;
+}
+
+.aspiration__box .text-swiper {
+  width: 660px;
+  margin: 0 auto;
+  height: 236px;
+}
+
+.aspiration__box .swiper-box-1 {
+  position: absolute;
+  top: 131px;
+  left: 290px;
+  z-index: 100;
+}
+
+.aspiration__box .swiper-box-2 {
+  position: absolute;
+  top: 10%;
+  left: 1083px;
+  width: 835px;
+}
+
+.aspiration__box .swiper-button-next,
+.aspiration__box .swiper-button-prev {
+  position: absolute;
+
+  --swiper-navigation-size: 20px;
+  --swiper-navigation-color: white;
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  top: 80%;
+}
+
+.aspiration__box .swiper-pagination-bullet-active {
+  color: black;
+  background: white;
+}

@@ -1,0 +1,215 @@
+/* 라이브러리 */
+.con {
+  width: var(--con-width);
+  margin: 0 auto;
+}
+
+body {
+  position: relative;
+  font-family: "Noto Sans KR";
+  width: 1920px;
+  /*   min-width:1920px; */
+}
+
+/* 커스텀 */
+/* section-1 */
+.contact__bg {
+  position: absolute;
+  left: -153px;
+  top: -147px;
+}
+
+.section-1 {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+}
+
+.wrapper {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, #57dc89, #1ad1ab 70%);
+  background-size: cover;
+  -webkit-filter: blur(0px);
+  filter: blur(0px);
+  overflow: hidden;
+  position: relative;
+  z-index: -100;
+}
+
+.wrapper::after {
+  z-index: -50;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.butter1 {
+  position: absolute;
+  top: 456px;
+  left: 700px;
+  width: 300px;
+}
+
+.flower {
+  position: absolute;
+  top: 527px;
+  left: 731px;
+  width: 536px;
+  z-index: -1;
+  mix-blend-mode: soft-light;
+}
+
+.circle_container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 10px;
+  transform-origin: left center;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  left: 0;
+  opacity: 0;
+  animation-name: move;
+  animation-duration: 18s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0px);
+    opacity: 0;
+  }
+
+  1% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateX(70vmin);
+    opacity: 0;
+  }
+}
+
+.wrapper .name_container {
+  position: absolute;
+  top: 438px;
+  left: 720px;
+  width: 500px;
+  height: 500px;
+  background: rgba(255, 255, 255, 0.2);
+  z-index: -1;
+  border-radius: 100%;
+  box-shadow: inset 0px 0px 30px 30px rgba(77, 224, 158, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.name {
+  font-size: 5.5vmax;
+}
+.designation {
+  margin-top: 10px;
+  font-size: 2vmax;
+}
+
+.section-1__txt > * {
+  position: absolute;
+  left: 94px;
+}
+
+.section-1__txt > .txt-1 {
+  top: 200px;
+  left: 53px;
+}
+
+.section-1__txt > .txt-2 {
+  top: 320px;
+}
+
+.section-1__txt > .txt-3 {
+  top: 421px;
+}
+
+.section-1__txt > .txt-4 {
+  top: 421px;
+  left: 427px;
+}
+
+.section-1__txt > .main-back-btn {
+  position: absolute;
+  top: 640px;
+}
+
+.section-1__down-resu {
+  position: absolute;
+  top: 294px;
+  left: 50%;
+  transform: translatex(-50%);
+}
+
+/* right-menu */
+
+.right-menu {
+  position: absolute;
+  top: 227px;
+  left: 1326px;
+  width: 472px;
+  height: 535px;
+}
+
+.right-menu .logo > img {
+  padding-bottom: 40px;
+  display: block;
+  margin: 0 auto;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+}
+
+#mail {
+  height: 48px;
+  margin-bottom: 20px;
+  border: 1px solid white;
+}
+
+input,
+textarea,
+button {
+  border: 1px solid white;
+  background-color: inherit;
+}
+
+#send-btn {
+  color: white;
+}
+
+html body ::placeholder {
+  font-size: 14px;
+  color: white;
+  font-family: "Noto Sans KR";
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+#body {
+  height: 286px;
+  margin-bottom: 40px;
+}
+
+#send-btn {
+  height: 48px;
+}

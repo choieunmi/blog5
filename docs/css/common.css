@@ -1,0 +1,606 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+/* 폰트 */
+@font-face {
+  font-family: "Linux Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Linux Libertine Bold"),
+    url("LinLibertine_Bd-4.0_.2_.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Linux Libertine";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Linux Libertine"),
+    url("LinLibertine_Re-4.1_.8_.woff") format("woff");
+}
+
+@media (min-width: 1920px) {
+  body {
+    overflow-x: hidden;
+  }
+}
+
+/* 스크롤바 꾸미기 시작 */
+:root {
+  overflow-y: overlay;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(45, 45, 45, 0.3);
+  border-radius: 0;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+/* 스크롤바 꾸미기 끝 */
+
+/* 라이브러리 */
+.pb-40 {
+  padding-bottom: 40px;
+}
+.pt-260 {
+  padding-top: 260px;
+}
+
+.pb-260 {
+  padding-bottom: 260px;
+}
+
+.pb-300 {
+  padding-bottom: 300px;
+}
+
+.font-NotoSans {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.font-roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+.font-Linux {
+  font-family: "Linux Libertine";
+}
+
+:root {
+  --top-bar-width: 1720px;
+}
+
+:root {
+  --text-toggle-color: #57dc89;
+  --text-color: #b1b1b1;
+}
+
+/* up-btn */
+.up-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 40px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.4s;
+  z-index: 1000;
+}
+
+.up-btn.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-20px);
+  /*  밑에서 위로 올라오게 하기.  */
+}
+
+/* 스크롤 */
+.scroll {
+  border: 1px solid black;
+  z-index: 100;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.scroll h1 {
+  z-index: 2;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+}
+
+#thanks p a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+#thanks p a:hover {
+  color: #888;
+}
+
+.demo a {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  z-index: 2;
+  display: inline-block;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  color: #fff;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.demo a:hover {
+  opacity: 0.5;
+}
+
+#scroll a {
+  padding-top: 60px;
+}
+#scroll a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 30px;
+  height: 50px;
+  margin-left: -15px;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  box-sizing: border-box;
+}
+#scroll a span::before {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  content: "";
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+  background-color: #fff;
+  border-radius: 100%;
+  -webkit-animation: sdb10 2s infinite;
+  animation: sdb10 2s infinite;
+  box-sizing: border-box;
+}
+
+@keyframes sdb10 {
+  0% {
+    -webkit-transform: translate(0, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: translate(0, 20px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes sdb10 {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    transform: translate(0, 20px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* header */
+header {
+  position: static;
+  top: 0;
+}
+
+.top-bar {
+  width: 100%;
+  position: fixed;
+  width: 100%;
+  top: 40px;
+  margin: 0 auto;
+  z-index: 900;
+  height: 56px;
+  color: white;
+  -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+  -moz-transform: matrix(1, 0, 0, 1, 0, 0);
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.top-bar.active {
+  background-color: #57dc89;
+  top: 0;
+  height: 70px;
+}
+.top-bar .logo {
+  margin-left: 100px;
+}
+
+.top-bar .logo {
+  margin-left: 100px;
+}
+
+.top-bar__ham-menu {
+  margin-right: 100px;
+  cursor: pointer;
+}
+
+html.active .top-bar {
+  -webkit-transform: matrix(1, 0, 0, 1, -320, 0);
+  -moz-transform: matrix(1, 0, 0, 1, -320, 0);
+  transform: matrix(1, 0, 0, 1, -320, 0);
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+#overlay {
+  background: #000;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  top: 0;
+  visibility: hidden;
+  width: 100%;
+  z-index: 999;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+html.active #overlay {
+  opacity: 0.65;
+  visibility: visible;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+html.active #overlay {
+  opacity: 0.65;
+  visibility: visible;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+html.active,
+html.active body {
+  overflow: hidden;
+}
+
+.top-bar > * {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.top-bar__menu-1 > ul > li > a {
+  display: block;
+}
+.top-bar__menu-1 > ul {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  height: 42px;
+}
+
+.top-bar__menu-1.active {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.top-bar__menu-1 > ul > li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 120px;
+}
+
+.top-bar__menu-1 > ul > li:hover {
+  background-color: white;
+}
+
+.top-bar__menu-1 > ul > li:hover > a {
+  color: black;
+  font-weight: bold;
+}
+
+/* 햄메뉴 */
+.ham-menu {
+  z-index: 1000;
+  background: #fff;
+  position: fixed;
+  right: -480px;
+  top: 0;
+  width: 480px;
+  height: 100%;
+  overflow: auto;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+html.active .ham-menu {
+  right: 0;
+  z-index: 1000;
+}
+
+html .section-group {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+html.active .section-group {
+  -webkit-transform: matrix(1, 0, 0, 1, -320, 0);
+  -moz-transform: matrix(1, 0, 0, 1, -320, 0);
+  transform: matrix(1, 0, 0, 1, -320, 0);
+
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.ham-menu__box {
+  margin-left: 60px;
+}
+
+.ham-menu__close-btn {
+  right: 40px;
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+
+.ham-menu__close-btn::before,
+.ham-menu__close-btn::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transform: rotate(45deg);
+}
+
+.ham-menu__close-btn::after {
+  transform: rotate(-45deg);
+}
+
+.ham-menu__box > .flex:first-child {
+  margin-top: 30px;
+}
+
+.ham-menu__list {
+  margin-top: 60px;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.ham-menu__list > ul > li {
+  margin-top: 35px;
+  position: relative;
+}
+
+.ham-menu__list > ul > li > a:hover {
+  color: #21d3a8;
+}
+
+.ham-menu__list > ul > li > a:hover:after {
+  width: 40px;
+  transition: 0.3s;
+}
+
+.ham-menu__list > ul > li > a {
+  position: relative;
+}
+
+.ham-menu__list > ul > li > a::before {
+  position: absolute;
+  content: "";
+  bottom: -10px;
+  left: 0;
+  width: 40px;
+  height: 1px;
+  background-color: #a1a1a1;
+}
+
+.ham-menu__list > ul > li > a::after {
+  position: absolute;
+  content: "";
+  bottom: -10px;
+  left: 0;
+  width: 0px;
+  height: 1px;
+  background-color: #57dc89;
+}
+
+.ham-menu__list > ul > li:first-child {
+  margin-top: 0;
+}
+
+.ham-menu__contact-menu {
+  padding-top: 132px;
+}
+
+.ham-menu__contact-menu > .mail {
+  margin-right: 40px;
+}
+
+.ham-menu__contact-menu p:first-child {
+  width: 100%;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+}
+
+.ham-menu__contact-menu div > :last-child {
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.talk-me h1 {
+  padding: 5px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.talk-me h1 span {
+  position: relative;
+  display: inline-block;
+  animation: bounce 0.8s ease infinite alternate;
+  font-size: 20px;
+  color: #57dc89;
+}
+
+.talk-me h1 span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.talk-me h1 span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.talk-me h1 span:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.talk-me h1 span:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.talk-me h1 span:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+.talk-me h1 span:nth-child(7) {
+  animation-delay: 0.7s;
+}
+
+.talk-me h1 span:nth-child(8) {
+  animation-delay: 0.8s;
+}
+
+@keyframes bounce {
+  50% {
+    top: -20px;
+  }
+}
+
+.ham-menu__copyright {
+  font-size: 10px;
+  margin-top: 10px;
+  color: #b3b3b3;
+}
+
+/* 하단바 */
+
+footer .swiper-box-1 .swiper-slide > a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer .swiper-box-1 .swiper-slide > a > p {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+footer .swiper-box-1 .swiper-slide a svg {
+  stroke: var(--text-toggle-color);
+}
+
+.footer-bar p {
+  color: var(--text-toggle-color);
+}
+
+.footer-bar div.active p {
+  color: var(--text-color);
+}
+
+footer .swiper-box-1 .swiper-slide > a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer .swiper-box-1 .swiper-slide > a > p {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+footer div svg.active .cls-1,
+footer div svg.active .cls-2 {
+  stroke: var(--text-toggle-color);
+}
+
+footer .swiper .swiper-pagination {
+  position: static;
+}
+
+footer .swiper-pagination-fraction {
+  text-align: center;
+  font-size: 16px;
+  color: #000;
+  opacity: 1;
+  bottom: -10px !important;
+}
+
+footer .swiper-pagination-current {
+  color: #21d3a8;
+}
+
+footer .swiper .swiper-button-prev {
+  background-image: url(https://cdn.jsdelivr.net/gh//choieunmi/brand_site/bottom/bottom-btn.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translatex(800px);
+  background-size: cover;
+  width: 36px;
+  height: 36px;
+  top: 50%;
+
+  position: absolute;
+}
+
+footer .swiper .swiper-button-next {
+  background-image: url(https://cdn.jsdelivr.net/gh//choieunmi/brand_site/bottom/bottom-btn.png);
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  transform: rotate(180deg) translatex(800px);
+  width: 36px;
+  height: 36px;
+  top: 50%;
+}
+
+footer .swiper-button-next::after,
+footer .swiper-button-prev::after {
+  display: none;
+}

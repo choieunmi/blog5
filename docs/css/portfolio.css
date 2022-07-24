@@ -1,0 +1,333 @@
+@media (min-width: 1920px) {
+  body {
+    overflow-x: hidden;
+  }
+}
+
+/* 커스텀 */
+
+:root {
+  --con-width: 1340px;
+}
+
+/* main  */
+.section {
+  height: 100%;
+  width: 100%;
+}
+
+/* section01 */
+
+.nanda-pf {
+  background-image: url(https://cdn.jsdelivr.net/gh//choieunmi/brand_site/portfolio/nada-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.disney-pf {
+  position: relative;
+  background-image: url(https://cdn.jsdelivr.net/gh//choieunmi/brand_site/portfolio/disn_bg.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+.nanda-pf > .phone {
+  top: 50%;
+  left: 55%;
+  transform: translatey(-50%);
+  position: absolute;
+  z-index: 200;
+}
+
+.nanda-pf {
+  background-color: Red;
+}
+
+.nanda-pf .cir {
+  position: absolute;
+  top: 50%;
+  right: -5%;
+  transform: translatey(-50%);
+}
+.nanda-pf .cir img {
+  right: 100%;
+}
+
+.animation-01 {
+  /* 애니메이션 이름 */
+  animation-name: rotate;
+  animation-duration: 6s;
+  transition-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.nanda-pf__eggchar > .white {
+  position: absolute;
+  top: 82%;
+  left: 2.4%;
+  transform: rotate(11deg);
+}
+
+.nanda-pf__eggchar > .egg {
+  position: absolute;
+  top: 74%;
+  left: 1.5%;
+  transform: rotate(60deg);
+}
+
+.nanda-pt__view-btn {
+  position: absolute;
+  top: 70%;
+  left: 15.1%;
+}
+
+.animation-02 {
+  /* 애니메이션 이름 */
+  animation-name: rotate2;
+  animation-duration: 3s;
+  transition-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotate2 {
+  0% {
+    transform: translatey(0);
+  }
+  50% {
+    transform: translatey(-120px);
+  }
+}
+
+/* section02 */
+.disney-pf {
+  position: relative;
+}
+
+.disney-pf__mokup {
+  position: absolute;
+  top: 50%;
+  left: 49%;
+  transform: translatey(-50%);
+}
+
+.disney-pf__mokup > img {
+  width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.disney-pf__proce-btn {
+  position: absolute;
+  left: 15.1%;
+  top: 70%;
+}
+
+.disney-pf__desi-btn {
+  position: absolute;
+  left: 22.4%;
+  top: 70%;
+}
+
+/* main  */
+.section-03 {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.section-03 .title {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  text-align: center;
+  transform: translatex(-50%);
+}
+.section-03 .title h1 {
+  font-weight: bold;
+  color: #57dc89;
+  font-size: 40px;
+}
+
+.section-03 .title p {
+  font-size: 24px;
+  color: #7c7c7c;
+}
+
+.section-03 .bg {
+  height: 560px;
+  width: 100%;
+  background-image: linear-gradient(to top, #1ad1ab 0%, #57dc89 100%);
+  position: absolute;
+  bottom: 0;
+}
+
+.section-03 .swiper-box-1 {
+  width: 100%;
+  margin-top: 3%;
+}
+
+.section-03 .swiper-slide {
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+.section-03 .swiper-box-1 .swiper-slide img {
+  width: 100%;
+  min-width: 1222px;
+}
+
+.section-03 .swiper-box-1 .swiper-slide > div {
+  transition: all 0.3s;
+}
+
+.section-03 .swiper-container {
+  overflow: visible;
+}
+
+.section-03 .swiper-slide-active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.section-03 .wrap_thumb_layout {
+  position: absolute;
+  top: 53%;
+  left: 63%;
+  z-index: 2;
+}
+
+.section-03 .pf-thumbs {
+  overflow: hidden;
+  width: 425px;
+  height: 345px;
+  border: 1px solid black;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: relative;
+}
+
+.section-03 .pf-thumbs .swiper-slide > div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.section-03 .pf-thumbs .swiper-slide div a > img {
+  padding-top: 40px;
+}
+
+.move-btn img:first-child {
+  padding-right: 5px;
+}
+
+/* navigation */
+.section-03 .wrap_thumb_layout .swiper-button-next,
+.wrap_thumb_layout .swiper-button-prev {
+  top: 75%;
+}
+.section-03 .swiper-box-1 .swiper-slide.swiper-slide-active div img {
+  margin: -10px;
+  z-index: 1;
+  position: relative;
+}
+
+.section-03 .swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}
+
+.section-03 .wrap_thumb_layout .swiper-button-prev {
+  width: 49px;
+  height: 52px;
+  background-image: url(https://cdn.jsdelivr.net/gh//choieunmi/brand_site/portfolio/pf-ar-left.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: white;
+  left: 88%;
+}
+
+.section-03 .wrap_thumb_layout .swiper-button-next {
+  width: 49px;
+  height: 52px;
+  background-image: url(https://cdn.jsdelivr.net/gh//choieunmi/brand_site/portfolio/pf-ar-right.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: white;
+  left: 100%;
+  border: 1px solid black;
+}
+
+/* pagination */
+.section-03 .swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: 200px;
+}
+
+.section-03 .swiper-pagination-bullet-active {
+  color: black;
+  background: #57dc89;
+}
+
+/*  section-04 */
+.section-04 {
+  position: relative;
+}
+
+.section04-box {
+  margin-left: 290px;
+}
+
+.section-04 .title {
+  margin-top: 1%;
+  margin-bottom: 3%;
+}
+
+.section-04 .title h1 {
+  font-weight: bold;
+  color: #57dc89;
+  font-size: 40px;
+}
+
+.section-04 .title p {
+  font-size: 24px;
+  color: #7c7c7c;
+}
+
+.etc-swiper .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  margin-bottom: 10px;
+}
+
+.section-04 .swiper-slide {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.section-04 .etc-swiper .swiper-scrollbar {
+  background: #57dc89;
+  transform: translatex(-2%);
+}
+
+.fp-watermark {
+  display: none;
+}

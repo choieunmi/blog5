@@ -1,0 +1,514 @@
+/* 폰트 */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Quicksand&display=swap");
+
+html > body {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+/*-- Lib --*/
+:root {
+  --site-bg: #080e20;
+  --site-size: 1920px;
+  --site-size-2: 1240px;
+  --site-btn-color: #a8a8a8;
+}
+
+.con {
+  width: var(--site-size);
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--site-bg);
+}
+
+.con-2 {
+  width: var(--site-size-2);
+  margin: 0 auto;
+}
+
+.bg-col {
+  background-color: #080e20;
+}
+
+@media (min-width: 1900px) {
+  body {
+    overflow-x: hidden;
+  }
+}
+
+
+.blur {
+  filter: blur(200px);
+  -webkit-filter: blur(200px);
+}
+
+
+/*-------- login --------*/
+.login-box {
+  padding-top: 200px;
+  padding-bottom: 80px;
+}
+
+.login__bg-box {
+  width: 560px;
+  height: 760px;
+  background-color: #050e27;
+  border: 1px solid #3c3c3c;
+  box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.5);
+  margin: 0 auto;
+}
+
+.login__bg-box > h1 {
+  font-size: 30px;
+  letter-spacing: -5%;
+  text-align: center;
+}
+
+.input-with-message ~ .input-status-message {
+  color: #a6bfff;
+  display: none;
+  font-size: 12px;
+  font-weight: 900;
+  padding-left: 55px;
+}
+
+.input-with-message.focused:placeholder-shown:not(:focus)
+  ~ .input-status-message--empty {
+  display: block;
+}
+
+.input-with-message:invalid ~ .input-status-message--invalid {
+  display: block;
+}
+
+input[type="password"] {
+  margin-top: 10px;
+}
+
+input[type="email"], input[type="password"]{
+  width: 481px;
+  height: 51px;
+  margin-left: 40px;
+  padding: 15px 20px;
+  border-radius: 8px;
+  outline: none;
+  background-color: #d1d1d1;
+  z-index: 4;
+}
+  
+input[type="text"]::-webkit-input-placeholder,
+input[type="password"]::-webkit-input-placeholder {
+  color: #545454;
+  font-weight: normal;
+}
+
+/*-- 체크박스 --*/
+
+.check-box {
+  margin-top: 30px;
+  margin-left: 40px;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.check-box1 {
+  margin-right: 113px;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+/* 기존체크박스 삭제후, label에 스타일 적용 */
+
+input[type="checkbox"] + label {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  background-color: white;
+  position: relative;
+  transform: translatey(20%);
+  margin-right: 8px;
+}
+
+input[type="checkbox"] + label + span {
+  position: absolute;
+  top: 50%;
+  transform: translatey(-50%);
+}
+
+/* 체크 안된 상태에서 배경넣기 */
+
+input[type="checkbox"]:checked + label {
+  text-align: center;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='black'%3E%3Cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3E%3C/svg%3E")
+    #ffffff;
+  border: 0px;
+}
+
+/* 로그인버튼 */
+.login-btn {
+  width: 480px;
+  height: 60px;
+  background-color: #332387;
+  border-radius: 50px;
+  margin: 0 auto;
+  letter-spacing: -1px;
+}
+
+.text-box {
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+}
+
+.text-box > p:not(:last-child) {
+  position: relative;
+  padding: 0 12px;
+}
+
+.text-box > p:last-child {
+  padding: 0 12px;
+}
+
+.text-box > p:not(:last-child)::after {
+  content: "";
+  background-color: white;
+  position: absolute;
+  left: 100%;
+  height: 65%;
+  top: 50%;
+  transform: translatey(-50%);
+  width: 2px;
+}
+
+.bar {
+  margin: 0 auto;
+  width: 481px;
+  background-color: #424242;
+  height: 1px;
+  margin-top: 82px;
+}
+
+/*---------버튼-------*/
+.up-btn {
+  position: fixed;
+  bottom: 0;
+  right: 4%;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.4s;
+  z-index: 1000;
+}
+
+.up-btn.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-20px);
+  /*  밑에서 위로 올라오게 하기.  */
+}
+
+/*-------- 상단 --------*/
+.first-top {
+  height: 30px;
+  font-size: 14px;
+  width: var(--site-width);
+  position: relative;
+  font-weight: 600;
+}
+
+.first-bar {
+  padding-right: 340px;
+  border-bottom: 0.5px solid #404040;
+}
+
+/*---- 언어설정 ----*/
+.lan-img {
+  width: 20px !important;
+  height: 20px !important;
+  text-decoration: none;
+}
+
+.menu-lang a {
+  font-family: verdana;
+  color: #c8c8c8;
+  text-decoration: none;
+  background: var(--site-bg);
+}
+
+.menu-lang a:hover {
+  color: #8976ff;
+}
+
+.menu-lang a > span {
+  visibility: hidden;
+  transition: visibility 2s;
+}
+
+.menu-lang a:hover > span {
+  visibility: visible;
+  transition: visibility 0.3s;
+}
+
+
+.language-box {
+  height: 24px;
+  background-color: rgba(0, 0, 0, 0);
+  width: 100px;
+  transition: height 0.2s;
+  -webkit-transition: height 0.2s;
+  margin-right: 10px;
+  
+}
+
+.language-box:hover {
+  height: 170px;
+  background-color: rgba(8, 14, 32, 0.7);
+  z-index: 20;
+}
+
+.language-box ul {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  list-style: none;
+}
+
+.language-box ul li {
+  float: left;
+}
+
+.language-box ul li a {
+  font-size: 13px;
+  font-weight: 600;
+  width: 100px;
+  padding-top: 2px;
+  padding-bottom: 6px;
+  /*padding: 10px; padding-right: 30px; padding-left: 30px;*/
+  margin: 0;
+  text-align: center;
+  display: block;
+}
+
+.drop-box {
+  position: absolute;
+  z-index: 21;
+  margin-top: 44px;
+  width: 150px;
+  height: 170px;
+  color: #c8c8c8;
+}
+.drop-box ul {
+  position: relative;
+  float: left;
+}
+
+.drop-box ul li {
+  clear: both;
+}
+.drop-box ul > li > a {
+  background: none;
+  border: none;
+}
+.drop-box ul > li > a {
+  background: none;
+  border: none;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.drop-box ul > li > a:hover {
+  color: #8976ff;
+  text-decoration: underline;
+}
+
+/*-------- 탑바 --------*/
+.main-top {
+  height: 80px;
+}
+
+.main-top.hover {
+  border-bottom: 0.5px solid #0e0a40;
+}
+
+.logo {
+  margin-left: 50px;
+}
+
+.d-menu-1 {
+  padding-left: 20px;
+  padding-right: 20px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.d-menu-1 > li {
+  position: relative;
+}
+
+.d-menu-1 > li > a {
+  padding: 20px;
+}
+.sing-up a {
+  color: #c8c8c8;
+  font-weight: 400;
+}
+.sing-up:hover a {
+  color: #8976ff;
+}
+/*-- 메뉴 볼 --*/
+.d-menu-box > ul > li > a > .menu-ball::after {
+  content: "";
+  position: absolute;
+  top: 15%;
+  left: 45%;
+  width: 5px;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s;
+}
+
+.d-menu-box > ul > li:hover > a > .menu-ball::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+/*-- 검색 --*/
+.top-start > .modal-mask {
+  position: absolute;
+  /* fixed 주면 계속 중앙에 위치   */
+  z-index: 900;
+  top: 0;
+  left: 0;
+  width: 1920px;
+  height: 1534px;
+  left: 50%;
+  transform: translatex(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  display: table;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  display: none;
+}
+
+.top-start > .modal-mask.active {
+  display: block;
+}
+
+.top-start > .modal-mask > .popup-box {
+  width: 860px;
+  position: absolute;
+  top: 5%;
+  z-index: 1000;
+  display: none;
+  margin: 0 auto;
+  left: 50%;
+  transform: translatex(-50%);
+}
+
+.top-start > .modal-mask > .popup-box > .header > #close-btn {
+  position: absolute;
+  left: auto;
+  top: 10px;
+  right: 10px;
+}
+
+.search-box .menu-ball::after {
+  content: "";
+  position: absolute;
+  top: 13%;
+  right: 5%;
+  width: 5px;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s;
+}
+
+.search-box:hover .menu-ball::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.text-box > p{
+  white-space:nowrap;
+}
+
+/*-------- 푸터 --------*/
+.mainfooter-box {
+  font-size: 18px;
+  font-weight: 800;
+  width: var(--site-size);
+  height: 464px;
+  background-image: url(https://cdn.jsdelivr.net/gh/solmopark/dipl/docs/img/footer_back_img.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.mainfooter-box .mainfooter-1 {
+  padding-left: 340px;
+  height: 176px;
+  padding-top: 100px;
+}
+
+.menu-foobox-1 {
+  padding-left: 520px;
+}
+
+.sb-foobox li {
+  padding-top: 6px;
+  padding-left: 78px;
+  color: #c8c8c8;
+  font-size: 14px;
+}
+
+.sb-foobox-2 li {
+  padding-top: 6px;
+  padding-left: 38px;
+  color: #a8a8a8;
+  font-size: 14px;
+}
+
+.sb-foobox-3 li {
+  padding-top: 6px;
+  padding-left: 35px;
+  color: #c8c8c8;
+  font-size: 14px;
+}
+.foobox-2__main li {
+  padding-top: 6px;
+}
+
+.foobox-3__end .icon-1 {
+  width: 200px;
+  height: 40px;
+}
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #332387 #b79ff7;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #332387;
+  border-radius: 10px;
+  border: 3px outset #ffffff;
+}

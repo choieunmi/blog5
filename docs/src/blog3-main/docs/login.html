@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disney+ Login</title>
+  <!-- jq -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+  </script>
+  <!-- 테일윈드 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+  <!--링크-->
+  <link rel="stylesheet" href="./css/login.css">
+  <script defer src="./js/login.js"></script>
+</head>
+
+<body>
+  <!--메인 탑-->
+  <header class="maintop-bar fixed top-0 left-0 w-full z-50 ">
+    <!--언어&로그인-->
+    <section class="first-top text-white">
+      <div class="first-bar con flex justify-end h-full">
+
+        <!--언어-->
+        <div class="language-box" id="language-box">
+          <ul class="menu-lang flex items-center">
+            <li><a href="#" class="flex items-center">
+                <span style="padding-right:3px;">한국어</span>
+                <img class="lan-img inline-block"
+                  src="https://cdn.jsdelivr.net/gh/solmopark/dipl/docs/img/korea_img.png" alt="">
+              </a></li>
+          </ul>
+          <div class="drop-box" id="drop-box">
+            <ul>
+              <li><a href="#" class="flex items-center">
+                  <span style="padding-right:3px;">English</span>
+                  <img class="lan-img inline-block"
+                    src="https://cdn.jsdelivr.net/gh/solmopark/dipl/docs/img/united_img.png" alt="">
+                </a></li>
+              <li><a href="#" class="flex items-center">
+                  <span style="padding-right:1px; font-size:13px;">German</span>
+                  <img class="lan-img inline-block"
+                    src="https://cdn.jsdelivr.net/gh/solmopark/dipl/docs/img/germany_img.png" alt="">
+                </a></li>
+              <li><a href="#" class="flex items-center">
+                  <span style="padding-right:9.4px; padding-left:8px;">Italia</span>
+                  <img class="lan-img inline-block"
+                    src="https://cdn.jsdelivr.net/gh/solmopark/dipl/docs/img/italy_img.png" alt="">
+                </a></li>
+              <li><a href="#" class="flex items-center">
+                  <span style="padding-right:8px; padding-left:4px;">한국어</span>
+                  <img class="lan-img inline-block"
+                    src="https://cdn.jsdelivr.net/gh/solmopark/dipl/docs/img/korea_img.png" alt="">
+                </a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!--로그인-->
+        <div class="sing-up" style="padding-top:2px;">
+          <a href="login.html">로그인</a>
+        </div>
+      </div>
+    </section>
+
+    <!--탑바-->
+    <section class="main-top con">
+      <div class="top-start con-2 relative flex h-full mx-auto">
+        <!--로고-->
+        <a href="index.html" class="logo flex h-full items-center">
+          <img src="https://cdn.jsdelivr.net/gh/solmopark/dipl/docs/img/disneyplus_logo.png" alt="">
+        </a>
+
+        <!--메뉴-->
+        <nav class="d-menu-box text-white">
+          <ul class="d-menu-1 flex items-center h-full">
+            <li>
+              <a href="index.html" class="flex items-center h-full">홈
+                <div class="menu-ball"></div>
+              </a>
+            </li>
+
+            <li>
+              <a href="originer.html" class="flex items-center h-full">오리지널
+                <div class="menu-ball"></div>
+              </a>
+            </li>
+            <li>
+              <a href="play.html" class="flex items-center h-full">영화
+                <div class="menu-ball"></div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="flex items-center h-full">시리즈
+                <div class="menu-ball"></div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="flex items-center h-full">이벤트
+                <div class="menu-ball"></div>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="flex-grow"></div>
+
+        <!--검색-->
+        <div class="search-box self-center">
+          <button id="open-btn">
+            <img class="search-img w-full" src="https://cdn.jsdelivr.net/gh//choieunmi/disney_home/search_btn.png"
+              alt="">
+          </button>
+          <div class="menu-ball"></div>
+        </div>
+
+        <div class="modal-mask">
+          <div class="popup-box">
+            <div class="header">
+              <button id="close-btn"><img src="https://cdn.jsdelivr.net/gh//choieunmi/disney_home/close_btn.png"
+                  alt=""></button>
+            </div>
+
+            <div class="body">
+              <img src="https://cdn.jsdelivr.net/gh//choieunmi/disney_home/popup-box.png" alt="">
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 버튼 -->
+    <img class="up-btn" src="https://cdn.jsdelivr.net/gh/choieunmi/disney_home/top_btn.png" alt="">
+  </header>
+
+  <!--로그인박스-->
+  <section class="login-box con">
+    <div class="login__bg-box con-2 relative">
+
+      <h1 class="font-bold text-white" style="padding-top: 50px;">로그인</h1>
+      <!--메일-->
+      <section class="emil-box pt-10">
+        <input onfocus="$(this).addClass('focused')" class="input-with-message " type="email"
+          placeholder="이메일 주소 또는 아이디" style="color:black;">
+        <div class="input-status-message input-status-message--empty">
+          떠나지 말아주세요.
+        </div>
+        <div class="input-status-message input-status-message--invalid">
+          이메일 형식이 올바르지 않습니다.
+        </div>
+      </section>
+      <!--패스워드-->
+      <section class="password-box">
+        <input onfocus="$(this).addClass('focused')" class="input-with-message" type="password"
+          placeholder="비밀번호를 입력해주세요.">
+        <div class="input-status-message input-status-message--empty">
+          떠나지 말아주세요.
+        </div>
+      </section>
+
+      <!--체크박스-->
+      <div class="check-box flex">
+        <div class="check-box1">
+          <input type="checkbox" id="check1" name="아이디 저장">
+          <label for="check1"></label>
+          <span class="" style="color:#c8c8c8;">
+            아이디 저장
+          </span>
+        </div>
+
+        <div class="checkbox check-box2 ">
+          <input type="checkbox" id="check2" name="자동 로그인">
+          <label for="check2"></label>
+          <span class="" style="color:#c8c8c8;">
+            자동 로그인
+          </span>
+        </div>
+      </div>
+
+      <button class="login-btn flex justify-center self-center items-center text-2xl text-white font-bold">
+        <a href="index.html"> 로그인</a>
+      </button>
+
+      <div class="text-box font-bold flex mx-auto pt-5" style="color:#c8c8c8;">
+        <p>아이디찾기</p>
+        <p>비밀번호재설정</p>
+        <p>회원가입</p>
+      </div>
+
+      <div class="bar"></div>
+
+      <div class="other-login flex justify-center mt-10">
+        <img src="https://cdn.jsdelivr.net/gh//choieunmi/disney_home/other_login.png" alt="">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 푸터 -->
+<section class="mainfooter-box relative con">
+  <div class="mainfooter-1 flex">
+    <a href="index.html" class="footer-logo items-center flex z-10">
+      <img src="https://cdn.jsdelivr.net/gh/solmopark/dipl/docs/img/disneyplus_logo.png" alt="">
+    </a>
+
+    <nav class="menu-foobox-1 text-white">
+      <ul class="foobox-1__main flex">
+        <li><a href="#" class="flex" style="padding-left:80px; padding-right:25px;">Disney+ 고객센터
+            <ul class="sb-foobox">
+              <li><a href="#">[전화번호]080-822-1416</a></li>
+              <li><a href="#">[메일주소]help@disneyplus.kr</a></li>
+              <li><a href="#">[운영시간]09:00 ~ 21:00</a></li>
+            </ul>
+          </a>
+        </li>
+        <li><a href="#" class="flex" style="padding-left:36px; padding-right:110px;">공지사항
+            <ul class="sb-foobox-2 ">
+              <li><a href="#">자주하는질문</a></li>
+              <li><a href="#">1:1문의</a></li>
+            </ul>
+          </a>
+        </li>
+        <li><a href="#" class="flex" style="padding-left:35px; padding-right:20px;">로그인
+            <ul class="sb-foobox-3">
+              <li><a href="#">회원가입</a></li>
+              <li><a href="#">구독하기</a></li>
+              <li><a href="#"></a></li>
+            </ul>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <nav class="menu-foobox-2 con-2 pt-4" style="color:#a8a8a8;  font-size: 14px;">
+    <ul class="foobox-2__main">
+      <li><a href="#">디즈니플러스</a></li>
+      <li><a href="#">주소 : 서울특별시 강남구 테헤란로 152, 7층 (우편번호: 06236)</a></li>
+      <li><a href="#">대표이사 : 오상호 / 사업자등록증 : 220-81-03347</a></li>
+      <li><a href="#">통신판매업신고번호 : 제2021-서울강남-05456호</a></li>
+      <li><a href="#">비디오물배급업 신고번호 : 제2016-16호</a></li>
+    </ul>
+  </nav>
+  <nav class="menu-foobox-3 con-2  pt-16" style="color:#c8c8c8; font-size:14px;">
+    <ul class="foobox-3__end flex">
+      <li><a href="#" class="flex items-center">개인정보처리방침 &nbsp;&nbsp;|&nbsp;&nbsp;</a></li>
+      <li><a href="#" class="flex items-center">개인정보처리방침부속서 &nbsp;&nbsp;|&nbsp;&nbsp;</a></li>
+      <li><a href="#" class="flex items-center">이용약관 &nbsp;&nbsp;|&nbsp;&nbsp;</a></li>
+      <li><a href="#" class="flex items-center text-white">&nbsp;&nbsp;디즈니+ 소개</a></li>
+      <li>
+        <a href="#" class="icon-1 absolute" style="bottom:16%; right:17.7%;">
+          <img src="https://cdn.jsdelivr.net/gh/solmopark/dipl/docs/img/footer_icon.png" alt="">
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+</section>
+
+</body>
+
+</html>

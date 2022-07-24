@@ -1,0 +1,105 @@
+/* 라이브러리 */
+.con {
+  width: var(--con-width);
+  margin: 0 auto;
+}
+
+body {
+  position: relative;
+  width: 1920px;
+  /*   min-width:1920px; */
+}
+
+/* 커스텀 */
+
+:root {
+  --con-width: 1340px;
+}
+
+/* branding-main */
+.branding-main {
+  position: relative;
+}
+
+.my-photo {
+  position: absolute;
+  left: 236px;
+  top: 260px;
+}
+
+/* personal */
+.personal {
+  height: 346px;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.personal > .txt > img {
+  top: 140px;
+  position: absolute;
+}
+
+/* concept */
+.concept {
+  position: relative;
+}
+.concept > .bg > .zoom {
+  position: absolute;
+  left: 938px;
+  z-index: 100;
+  top: 317px;
+}
+.concept > .bg {
+  overflow: hidden;
+  height: 679px;
+  width: 1920px;
+}
+.concept > .bg > img {
+  transition: 0.5s;
+}
+.concept.active > .bg > img {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+.concept__box > img {
+  position: absolute;
+}
+
+.concept__box > .box-1 {
+  top: 296px;
+  left: 371px;
+}
+
+.concept__box > .box-2 {
+  top: 291px;
+  left: 841px;
+}
+
+.concept__box > .box-3 {
+  top: 314px;
+  left: 1263px;
+}
+
+/* logo */
+.logo {
+  position: relative;
+}
+
+.logo__logo-img > .box {
+  top: 256px;
+  left: 982px;
+  position: absolute;
+}
+
+.logo__logo-img > .inequ {
+  position: absolute;
+  top: 405px;
+  left: 1013px;
+}
+
+.logo__logo-img > .jewelry {
+  top: 295px;
+  left: 1224px;
+  position: absolute;
+}

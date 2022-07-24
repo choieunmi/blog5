@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disney+ Play</title>
+  <!-- 제이쿼리 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!--테일윈드-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+  <!--폰트어썸-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!--랑크-->
+  <link rel="stylesheet" href="./css/play.css">
+  <script defer src="./js/play.js"></script>
+</head>
+
+<body>
+  <!--up-btn-->
+  <img class="up-btn" src="https://cdn.jsdelivr.net/gh/choieunmi/disney_home/top_btn.png" alt="">
+  <!-- 헤더 -->
+  <header class="top-bar-ver2 con">
+    <div class="menu_wrap flex h-full relative">
+      <!-- 로고 -->
+      <a href="index.html" class="logo items-center h-full  flex">
+        <img src="https://cdn.jsdelivr.net/gh/yoonh7765/disneypf/docs/img/disney_logo.png" alt="">
+      </a>
+      <!--메뉴-->
+      <nav class="top-bar-ver2__menu-1 mr-auto">
+        <ul class="menu__box flex h-full">
+          <li><a href="index.html" class="flex items-center h-full">홈
+              <div class="menu-ball"></div>
+            </a></li>
+          <li><a href="originer.html" class="flex items-center h-full">오리지널
+              <div class="menu-ball"></div>
+            </a></li>
+          <li><a href="play.html" class="flex items-center h-full">영화
+              <div class="menu-ball"></div>
+            </a></li>
+          <li><a href="#" class="flex items-center h-full">시리즈
+              <div class="menu-ball"></div>
+            </a></li>
+          <li><a href="#" class="flex items-center h-full">이벤트
+              <div class="menu-ball"></div>
+            </a></li>
+        </ul>
+      </nav>
+
+      <div class="top-bar-ver2__r-menu self-center">
+        <img src="https://cdn.jsdelivr.net/gh//choieunmi/disney_home/top-bar_icon.png" alt="">
+      </div>
+
+    </div>
+    </div>
+  </header>
+  <!-- 이터널스 -->
+  <section class="section-1 con">
+    <div class="con-big main-box">
+      <div class="move-box con-2 relative">
+        <img class="main-img" style="object-position: top;	object-fit: cover;"
+          src="https://cdn.jsdelivr.net/gh/yoonh7765/disneypf/docs/img/eternals.jpg" alt="">
+        <img class="absolute play-icon"
+          src="https://cdn.jsdelivr.net/gh/yoonh7765/disneypf/docs/img/eternals_play-bar.png" alt="">
+        <div class="box-3 absolute"></div>
+        <div class="box-4 absolute"></div>
+      </div>
+    </div>
+  </section>
+  <!-- 이터널스 밑 설명 -->
+  <section class="section-2 con relative">
+    <div class="con-2">
+      <div class="box-1">
+        <div class="text-box">
+          <h1>이터널스(The Eternals)</h1>
+          <h2>2021년 ㆍ 155분</h2>
+          <p>마블 스튜디오의 &lt;이터널스&gt;는 수 천년에 걸쳐 그 모습을 드러내지 않고<br>살아온 불멸의 히어로들이 &lt;어벤져스: 엔드게임&gt; 이후 인류의 가장 오래된<br>적
+            '데비안츠'에 맞서기 위해 다시 힘을 합치면서 벌어지는 이야기
+          </p>
+        </div>
+        <div class="test-play-box absolute">
+          <div class="play-btn-box flex">
+            <ul class="flex play-btn items-center">
+              <li>
+                <a href="#">
+                  <i class="fa-solid fa-play"></i>
+                  <span>재생하기</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-solid fa-plus"></i>
+                  <span>추가하기</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="play-bar flex items-center">
+          <img src="https://cdn.jsdelivr.net/gh/yoonh7765/disneypf/docs/img/play-bar.png" alt="">
+          <p>109분 남음</p>
+        </div>
+      </div>
+      <div class="box-2 flex items-center absolute">
+        <img src="https://cdn.jsdelivr.net/gh/yoonh7765/disneypf/docs/img/rating_point.png" alt="">
+        <img src="https://cdn.jsdelivr.net/gh/yoonh7765/disneypf/docs/img/rating_number.png" alt="">
+        <img src="https://cdn.jsdelivr.net/gh/yoonh7765/disneypf/docs/img/rating_percent.png" alt="">
+      </div>
+      <div class="box-2__text-box absolute flex ">
+        <h1>관람포인트</h1>
+        <h1>실관람평점</h1>
+        <h1>관람율</h1>
+      </div>
+    </div>
+  </section>
+  <!-- 이터널스 밑 설명 2 -->
+  <section class="section-3 con" style="font-weight:800;">
+    <div class="con-2 category-2">
+      <div class="text-box-2 relative">
+        <div class="eternals-box absolute pt-4" style="top:-180px;">
+          <h1>이터널스(The Eternals)</h1>
+          <div class="eternals-box-1 absolute pt-6">
+            <span>원제<br>장르<br>감독<br>출연</span>
+          </div>
+          <div class="absolute text_big pt-6"> the Eternals <br>액션, 드라마, 판타지 <br> 안소니 루소, 조 루소 <br>제마 챈, 리처드 매든, 쿠마일
+            난지아니, 리아 맥휴, 브라이언 타이리 헨리, <br> 로런 리들로프, 배리 키오건, 마동석(돈 리), 킷 해링턴, 살마 아예크, 안젤리나 졸리,<br> 하리시 파텔, 하즈 슬레이만, 에사이
+            대니얼 크로스, 자인 알 라피아, 빌 스카스가드,<br>데이비드 케이 </div>
+          <div class="absolute more flex items-center">
+            <span>더보기</span>
+            <img src="https://cdn.jsdelivr.net/gh/yoonh7765/disneypf/docs/img/more.png" alt="">
+          </div>
+        </div>
+        <div class="text-box-2-2 absolute">
+          <div class="basket">
+            <div class="flex text-box-2-2_title items-center">
+              <h1>영화 평점</h1>
+              <img src="https://cdn.jsdelivr.net/gh/yoonh7765/disneypf/docs/img/star5.png" alt="">
+              <img src="https://cdn.jsdelivr.net/gh/yoonh7765/disneypf/docs/img/movie-4.5.png" alt="">
+            </div>
+            <!--박스1 -->
+            <div class="text-box-2-2_rating">
+              <div class="flex rating_text-box">
+                <img src="https://cdn.jsdelivr.net/gh/yoonh7765/disneypf/docs/img/smile.png" alt="">
+                <span style="position:relative; top:-3px; margin-bottom:10px;">재밌어요 94%</span>
+              </div>
+              <div class="flex rating_text-box">
+                <img src="https://cdn.jsdelivr.net/gh/yoonh7765/disneypf/docs/img/smile.png" alt="">
+                <span style="position:relative; top:-3px;">다시 보고 싶어요 56%</span>
+              </div>
+            </div>
+            <!--박스2 -->
+            <div class="text-box-2-2_rating" style="margin-top:20px;">
+              <div class="flex rating_text-box">
+                <img src="https://cdn.jsdelivr.net/gh/yoonh7765/disneypf/docs/img/good.png" alt="">
+                <span style="position:relative; top:-3px; margin-bottom:10px;">디즈니 오리지널 구독자들이 뽑은 영화 Top 10위에 든 작품</span>
+              </div>
+              <div class="flex rating_text-box">
+                <img src="https://cdn.jsdelivr.net/gh/yoonh7765/disneypf/docs/img/medal.png" alt="">
+                <span style="position:relative; top:-3px;">최근 한달간 시청률 상위 5% 작품</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 막대바 -->
+  <section class="w-full con">
+    <div class="con-2">
+      <div class="bar mx-auto"></div>
+    </div>
+  </section>
+  <!-- 추천 영화 -->
+  <section class="section-4 con ">
+    <div class="con-2 movie-box relative">
+      <h1>올라프 좋아하세요? 디즈니 영화 모아보기</h1>
+      <ul class="grid grid-cols-5 gap-7 movie-list">
+        <li>
+          <a href="#" class="block img-box"><img class="block w-full"
+              src="https://cdn.jsdelivr.net/gh/yoonh7765/disneypf/docs/img/movie-list-1-1.png" alt=""></a>
+          <a href="#" class="block mt-3">올라프의 선물</a>
+        </li>
+        <li>
+          <a href="#" class="block img-box"><img class="block w-full"
+              src="https://cdn.jsdelivr.net/gh/yoonh7765/disneypf/docs/img/movie-list-1-2.png" alt=""></a>
+          <a href="#" class="block mt-3">토이스토리</a>
+        </li>
+        <li>
+          <a href="#" class="block img-box"><img class="block w-full"
+              src="https://cdn.jsdelivr.net/gh/yoonh7765/disneypf/docs/img/movie-list-1-3.png" alt=""></a>
+          <a href="#" class="block mt-3">램프 라이프</a>
+        </li>
+        <li>
+          <a href="#" class="block img-box"><img class="block w-full"
+              src="https://cdn.jsdelivr.net/gh/yoonh7765/disneypf/docs/img/movie-list-1-4.png" alt=""></a>
+          <a href="#" class="block mt-3">더그의 일상</a>
+        </li>
+        <li>
+          <a href="#" class="block img-box"><img class="block w-full"
+              src="https://cdn.jsdelivr.net/gh/yoonh7765/disneypf/docs/img/movie-list-1-5.png" alt=""></a>
+          <a href="#" class="block mt-3">아이스 에이지 - 벅의 대모험</a>
+        </li>
+      </ul>
+    </div>
+    <div class="con-2 movie-box relative">
+      <h1>마블 스튜디오의 영화 모아보기</h1>
+      <ul class="grid grid-cols-5 gap-7 movie-list">
+        <li>
+          <a href="#" class="block img-box"><img class="block w-full"
+              src="https://cdn.jsdelivr.net/gh/yoonh7765/disneypf/docs/img/movie-list-2-1.png" alt=""></a>
+          <a href="#" class="block mt-3 ">윈터솔저</a>
+        </li>
+        <li>
+          <a href="#" class="block img-box"><img class="block w-full"
+              src="https://cdn.jsdelivr.net/gh/yoonh7765/disneypf/docs/img/movie-list-2-2.png" alt=""></a>
+          <a href="#" class="block mt-3">이터널스</a>
+        </li>
+        <li>
+          <a href="#" class="block img-box"><img class="block w-full"
+              src="https://cdn.jsdelivr.net/gh/yoonh7765/disneypf/docs/img/movie-list-2-3.png" alt=""></a>
+          <a href="#" class="block mt-3">로키</a>
+        </li>
+        <li>
+          <a href="#" class="block img-box"><img class="block w-full"
+              src="https://cdn.jsdelivr.net/gh/yoonh7765/disneypf/docs/img/movie-list-2-4.png" alt=""></a>
+          <a href="#" class="block mt-3">블랙 위도우</a>
+        </li>
+        <li>
+          <a href="#" class="block img-box"><img class="block w-full"
+              src="https://cdn.jsdelivr.net/gh/yoonh7765/disneypf/docs/img/movie-list-2-5.png" alt=""></a>
+          <a href="#" class="block mt-3">완다비전</a>
+        </li>
+      </ul>
+    </div>
+    <div class="con-2 movie-box relative">
+      <h1>애니메이션 영화 모아보기</h1>
+      <ul class="grid grid-cols-5 gap-7 movie-list">
+        <li>
+          <a href="#" class="block img-box"><img class="block w-full"
+              src="https://cdn.jsdelivr.net/gh/yoonh7765/disneypf/docs/img/movie-list-3-1.png" alt=""></a>
+          <a href="#" class="block mt-3">심슨가족의 해피 플러스 데이</a>
+        </li>
+        <li>
+          <a href="#" class="block img-box"><img class="block w-full"
+              src="https://cdn.jsdelivr.net/gh/yoonh7765/disneypf/docs/img/movie-list-3-2.png" alt=""></a>
+          <a href="#" class="block mt-3">도리의 산호초 마을</a>
+        </li>
+        <li>
+          <a href="#" class="block img-box"><img class="block w-full"
+              src="https://cdn.jsdelivr.net/gh/yoonh7765/disneypf/docs/img/movie-list-3-3.png" alt=""></a>
+          <a href="#" class="block mt-3">포키는 궁금한게 많아요</a>
+        </li>
+        <li>
+          <a href="#" class="block img-box"><img class="block w-full"
+              src="https://cdn.jsdelivr.net/gh/yoonh7765/disneypf/docs/img/movie-list-3-4.png" alt=""></a>
+          <a href="#" class="block mt-3">고장난 론</a>
+        </li>
+        <li>
+          <a href="#" class="block img-box"><img class="block w-full"
+              src="https://cdn.jsdelivr.net/gh/yoonh7765/disneypf/docs/img/movie-list-3-5.png" alt=""></a>
+          <a href="#" class="block mt-3">빅 히어로</a>
+        </li>
+      </ul>
+    </div>
+    <div class="con-2 movie-box relative">
+      <h1>지금 뜨는 시청률 상위 10% 영화 모아보기</h1>
+      <ul class="grid grid-cols-5 gap-7 movie-list">
+        <li>
+          <a href="#" class="block img-box"><img class="block w-full"
+              src="https://cdn.jsdelivr.net/gh/yoonh7765/disneypf/docs/img/movie-list-4-1.png" alt=""></a>
+          <a href="#" class="block mt-3">북 오브 보바펫</a>
+        </li>
+        <li>
+          <a href="#" class="block img-box"><img class="block w-full"
+              src="https://cdn.jsdelivr.net/gh/yoonh7765/disneypf/docs/img/movie-list-4-2.png" alt=""></a>
+          <a href="#" class="block mt-3">웰컴 투 어스</a>
+        </li>
+        <li>
+          <a href="#" class="block img-box"><img class="block w-full"
+              src="https://cdn.jsdelivr.net/gh/yoonh7765/disneypf/docs/img/movie-list-4-3.png" alt=""></a>
+          <a href="#" class="block mt-3">저스트 비욘드</a>
+        </li>
+        <li>
+          <a href="#" class="block img-box"><img class="block w-full"
+              src="https://cdn.jsdelivr.net/gh/yoonh7765/disneypf/docs/img/movie-list-4-4.png" alt=""></a>
+          <a href="#" class="block mt-3">호크아이</a>
+        </li>
+        <li>
+          <a href="#" class="block img-box"><img class="block w-full"
+              src="https://cdn.jsdelivr.net/gh/yoonh7765/disneypf/docs/img/movie-list-4-5.png" alt=""></a>
+          <a href="#" class="block mt-3">올라프가 전해요</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <!-- 푸터 -->
+  <section class="footer con">
+    <div class="footer-box">
+      <img style="display:block; margin:0 auto;"
+        src="https://cdn.jsdelivr.net/gh/yoonh7765/disneypf/docs/img/footer-bar.png" alt="">
+      <div class="blur"></div>
+    </div>
+  </section>
+  <script type="text/javascript" src="play.js"></script>
+</body>
+</html>

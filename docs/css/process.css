@@ -1,0 +1,211 @@
+/* 라이브러리 */
+.con {
+  width: var(--con-width);
+  margin: 0 auto;
+}
+
+html > body {
+  width: 1920px;
+  font-family: "Noto Sans KR", sans-serif;
+  /*   min-width:1920px; */
+}
+
+/* 커스텀 */
+
+:root {
+  --con-width: 1340px;
+}
+
+.con {
+  width: var(--con-width);
+  margin: 0 auto;
+}
+
+/* header */
+
+.top-bar .top-bar__ham-menu {
+  width: 40px;
+  height: 19px;
+  background-image: url(https://cdn.jsdelivr.net/gh//choieunmi/brand_site/process/ham_black-icon.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.top-bar.active .top-bar__ham-menu {
+  background-image: url(https://cdn.jsdelivr.net/gh//choieunmi/brand_site/top-bar/top-bar__ham40-white.png);
+}
+.top-bar__menu-1 {
+  color: black;
+}
+.top-bar__menu-1 > ul {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  height: 42px;
+}
+
+/* main */
+.main {
+  position: relative;
+}
+.frame {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 250px;
+  left: 348px;
+  width: 500px;
+  height: 500px;
+}
+.wrap {
+  width: 480px;
+  height: 480px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  background: rgb(171, 255, 248);
+  background: linear-gradient(180deg, #37ecba 37%, #96e6a1 81%);
+  transform: translate3d(0, 0, 0);
+}
+.wave {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  top: 60%;
+  left: -100px;
+  border-radius: 43%;
+  animation: drift 4s infinite linear;
+  background: rgba(255, 255, 255, 0.4);
+}
+.wave.layer_1 {
+  animation: drift 8s infinite linear;
+  background: rgba(255, 255, 255, 0.2);
+}
+@keyframes drift {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+.butter {
+  position: absolute;
+  z-index: 100;
+  top: 0px;
+  left: 40px;
+  z-index: 100;
+}
+.main-btn {
+  position: absolute;
+  top: 885px;
+  left: 1439px;
+}
+
+/* overview */
+.overview {
+  height: 346px;
+  display: flex;
+  align-items: center;
+}
+
+/* concept */
+.concept {
+  height: 678px;
+  position: relative;
+}
+.concept__txt img {
+  top: 485px;
+  position: absolute;
+  z-index: 100;
+}
+.concept__txt > .txt-1 > img {
+  left: 310px;
+}
+.concept__txt > .txt-2 > img {
+  left: 810px;
+}
+.concept__txt > .txt-3 > img {
+  left: 1273px;
+}
+
+/* about-page */
+.about-page {
+  position: relative;
+  margin-top: 120px;
+  padding-bottom: 200px;
+}
+.about-page__txt img {
+  left: 890px;
+  position: relative;
+}
+.about-page__mokup > div {
+  position: absolute;
+  top: 0;
+}
+.about-page__mokup > .main {
+  margin-top: 156px;
+  left: 312px;
+}
+.about-page__mokup > :nth-child(2n) {
+  left: 0px;
+}
+.about-page__mokup > .branding {
+  margin-top: 1062px;
+  left: 0px;
+}
+.about-page__mokup > .about {
+  margin-top: 1718px;
+  right: 0px;
+}
+.about-page__mokup > .pf {
+  margin-top: 2374px;
+}
+.about-page__mokup > .contact {
+  margin-top: 3050px;
+  left: 537px;
+}
+
+/* schedul */
+.schedul .con {
+  position: relative;
+}
+.schedul .bg > .text {
+  font-size: 18px;
+  color: #afafaf;
+  position: absolute;
+  top: 10px;
+  left: 261px;
+}
+.schedul__box > div {
+  position: absolute;
+}
+.schedul__box > .box-1 {
+  top: 139px;
+  left: 12px;
+}
+.schedul__box > .box-2 {
+  top: 223px;
+  left: 135px;
+}
+.schedul__box > .box-3 {
+  top: 307px;
+  left: 135px;
+}
+.schedul__box > .box-4 {
+  top: 391px;
+  left: 268px;
+}
+.schedul__box > .box-5 {
+  top: 475px;
+  left: 400px;
+}
+.schedul__box > .box-6 {
+  top: 559px;
+  left: 533px;
+}
+.schedul__box > .box-7 {
+  top: 643px;
+  left: 809px;
+}
+.schedul__box > .box-8 {
+  top: 727px;
+  left: 1063px;
+}
